@@ -1,0 +1,148 @@
+.table-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.table-search {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  background: var(--paper-alt);
+  color: var(--ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.table-search:focus {
+  border-color: var(--moss);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.15);
+  background: #fff;
+}
+
+.table-search::placeholder {
+  color: #94a3b8;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 480px;
+}
+
+.table-box thead th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--moss);
+  background: var(--paper-alt);
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+}
+
+.table-box thead th.is-sortable {
+  cursor: pointer;
+}
+
+.table-box thead th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.table-box thead th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.sort-arrow {
+  color: var(--slate);
+  opacity: 0.5;
+}
+
+.sort-arrow.is-active {
+  color: var(--moss);
+  opacity: 1;
+}
+
+.table-box tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--paper-alt);
+  color: #333;
+}
+
+.table-box tbody tr:nth-child(even) {
+  background: var(--paper);
+}
+
+.table-box tbody tr:hover {
+  background: #eef2f8;
+}
+
+.table-box tbody tr td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.empty-cell {
+  text-align: center;
+  color: var(--slate);
+  padding: 24px !important;
+}
+
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--moss);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--moss);
+  color: #fff;
+  border-color: var(--moss);
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.pagination span {
+  font-size: 13px;
+  color: var(--slate);
+}
+
+@media (max-width: 720px) {
+  .table-box {
+    padding: 16px;
+  }
+  .table-search {
+    max-width: none;
+  }
+}

@@ -1,0 +1,21 @@
+.chart-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.chart-title {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .chart-box {
+    padding: 16px;
+  }
+}

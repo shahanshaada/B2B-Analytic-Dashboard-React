@@ -1,0 +1,131 @@
+:root {
+  --ink: #101828;
+  --paper: #f4f7fb;
+  --paper-alt: #e8edf5;
+  --moss: #1e3a5f;
+  --moss-dark: #142c47;
+  --clay: #c2410c;
+  --slate: #5b6b82;
+  --line: #d7dee8;
+  --card-radius: 14px;
+  --shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.06), 0 6px 20px rgba(16, 24, 40, 0.06);
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.layout-main {
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 24px 32px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.card-label {
+  font-size: 12px;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.card-value {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.state-message {
+  font-size: 14px;
+  color: var(--slate);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 16px 20px;
+}
+
+.state-message-error {
+  color: #9f1c1c;
+  background: #fdf1ee;
+  border-color: #f2c9c0;
+}
+
+.coming-soon {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--slate);
+}
+
+.coming-soon h2 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-family: var(--font-display);
+}
+
+@media (max-width: 960px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .layout-main { margin-left: 0; }
+  .content { padding: 16px 16px 32px; gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
