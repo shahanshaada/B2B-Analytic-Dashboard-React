@@ -118,7 +118,6 @@ export default function Sidebar({ children, activeId, onNavigate }) {
                   <span className="profile-name">Signed in as:</span>
                   <span className="profile-role">Administrator</span>
                 </span>
-                <MdSettings size={15} className="profile-settings" />
               </button>
             </div>
           )}
