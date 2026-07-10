@@ -9,7 +9,7 @@
 ## CI/CD
 - Trigger: push to `main`
 - Pipeline stages: **build** → **deploy**
-  - Build: install deps, `npm run build` (React) / `ng build` (Angular)
+  - Build: install deps, `npm run build` (React)
   - Deploy: sync build output to S3, then invalidate the CloudFront cache
 - Secrets (AWS access key/secret, or role ARN) are stored in **GitHub Secrets** — not committed to source
 
